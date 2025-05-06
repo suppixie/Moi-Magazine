@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import react, { lazy, useState } from 'react';
 import './home.css';
 import pages from './pages.js';
 
@@ -31,11 +31,11 @@ function Home() {
             <button className='flip-back-btn' onClick={handleFlipBack}>Flip </button> 
 
             <div className='left-column'> 
-                <img src={currentLeftPage.image} alt='Magazine Page' className='page'/>
+                <img src={currentLeftPage.image} loading="lazy" alt='Magazine Page' className='page'/>
             </div>
 
             <div className='right-column'> 
-                <img src={currentRightPage.image} alt='Magazine Page' className='page'/>
+                <img src={currentRightPage.image} loading="lazy" alt='Magazine Page' className='page'/>
             </div>
 
             <button className='flip-front-btn' onClick={handleFlipFront}> Flip </button> 
